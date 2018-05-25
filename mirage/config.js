@@ -1,9 +1,7 @@
 export default function() {
   this.namespace = '/api';
 
-  this.get('/succulents', function() {
-    return {
-      data: [{
+  let succulents = [{
         type: 'succulent',
         id: 'succ1',
         attributes: {
@@ -36,8 +34,16 @@ export default function() {
           bedrooms: 3,
           image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
         }
-      }]
-    };
+      }];
+    this.get('/succulents', function(db, request) {
+    if(request.queryParams.city !== undefined) {
+      let filteredSucculents = succulents.filter(function(i) {
+        return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
+      });
+      return { data: filteredSucculents };
+    } else {
+      return { data: succulents };
+    }
   });
 }
 

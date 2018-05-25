@@ -7,9 +7,14 @@
   {{/link-to}}
 </div>
 
-{{#each model as |succulentUnit|}}
-  {{succulent-listing succulent=succulentUnit}}
-{{/each}}
-undefined
+{{#list-filter
+   filter=(action 'filterByLocation')
+   as |filteredResults|}}
+  <ul class="results">
+    {{#each filteredResults as |succulentUnit|}}
+      <li>{{succulent-listing succulent=succulentUnit}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}
 
 {{outlet}}
