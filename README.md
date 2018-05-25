@@ -45,7 +45,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+* refer to [How to deploy to Heroku](http://www.programwitherik.com/deploy-your-ember-application-to-heroku/) for more info
 
 ## Further Reading / Useful Links
 
