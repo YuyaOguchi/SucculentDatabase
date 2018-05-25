@@ -46,6 +46,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 ### Deploying
 
 * refer to [How to deploy to Heroku](http://www.programwitherik.com/deploy-your-ember-application-to-heroku/) for more info
+* `git push heroku master`
 
 ## Further Reading / Useful Links
 
