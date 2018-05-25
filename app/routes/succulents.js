@@ -7,7 +7,7 @@ model() {
       title: 'succulent1',
       owner: 'Me',
       city: 'succulent city',
-      category: 'succulent',
+      category: 'Succulent',
       bedrooms: 3,
       image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
       description: 'This is one hell of a nice succulent!'
@@ -25,7 +25,7 @@ model() {
       title: 'succulent3',
       owner: 'Me',
       city: 'succulent city3',
-      category: 'succulent',
+      category: 'Succulent',
       bedrooms: 3,
       image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
       description: 'This is one hell of a nice succulent!'
