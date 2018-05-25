@@ -3,7 +3,7 @@
     <img src="{{succulent.image}}" alt="">
     <small>View Larger</small>
   </a>
-  <h3>{{succulent.title}}</h3>
+  <h3>{{#link-to "succulents.show" succulent class=succulent.id}}{{succulent.title}}{{/link-to}}</h3>
   <div class="detail owner">
     <span>Owner:</span> {{succulent.owner}}
   </div>

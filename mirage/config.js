@@ -35,7 +35,10 @@ export default function() {
           image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
         }
       }];
-    this.get('/succulents', function(db, request) {
+
+  
+
+  this.get('/succulents', function(db, request) {
     if(request.queryParams.city !== undefined) {
       let filteredSucculents = succulents.filter(function(i) {
         return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
@@ -45,5 +48,12 @@ export default function() {
       return { data: succulents };
     }
   });
+
+
+  // Find and return the provided rental from our rental list above
+  this.get('/succulents/:id', function (db, request) {
+    return { data: succulents.find((succulent) => request.params.id === succulent.id) };
+  });
+
 }
 

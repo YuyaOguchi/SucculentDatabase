@@ -9,7 +9,9 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('about');
   this.route('contact');
-  this.route('succulents');
+  this.route('succulents', function() {
+    this.route('show', {path: '/:succulent_id'});
+  });
 });
 
 export default Router;
