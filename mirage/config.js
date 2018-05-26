@@ -43,7 +43,6 @@ export default function() {
       }];
 
   
-
   this.get('/succulents', function(db, request) {
     if(request.queryParams.area !== undefined) {
       let filteredSucculents = succulents.filter(function(i) {
@@ -54,8 +53,6 @@ export default function() {
       return { data: succulents };
     }
   });
-
-
   // Find and return the provided rental from our rental list above
   this.get('/succulents/:id', function (db, request) {
     return { data: succulents.find((succulent) => request.params.id === succulent.id) };
