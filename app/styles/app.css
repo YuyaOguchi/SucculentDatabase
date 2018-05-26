@@ -20,3 +20,12 @@
 }
 
 .menu{background-color: var(--succulent-4)}
+.listing small{width: 100px}
+
+
+.list-filter input{
+  width: 200px;
+  margin: 5px;
+  margin-left: 20px;
+  display: inline-block;
+}

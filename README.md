@@ -45,6 +45,17 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
+SURGE working fine
+* refer to 
+<a href= "http://surge.sh/"> This page</a> 
+for surge download
+* `ember build`
+* `mv dist/index.html dist/200.html`
+* `surge dist <url_you_want>.surge.sh`
+* This repo uses `surge dist succulentdb.surge.sh`
+* <a href="http://succulentdb.surge.sh/succulents"> http://succulentdb.surge.sh/succulents</a>
+
+HEROKU Currently Failing
 * refer to [How to deploy to Heroku](http://www.programwitherik.com/deploy-your-ember-application-to-heroku/) for more info
 * `git push heroku master`
 

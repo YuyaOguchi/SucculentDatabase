@@ -1,5 +1,9 @@
+{{input nameval=nameval
+        key-up=(action 'handleFilterEntry')
+        class="light filters"
+        placeholder="Filter By Name"}}
 {{input value=value
         key-up=(action 'handleFilterEntry')
-        class="light"
+        class="light filters"
         placeholder="Filter By Location"}}
 {{yield results}}
