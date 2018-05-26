@@ -7,6 +7,7 @@ export default DS.Model.extend({
   category: DS.attr(),
   image: DS.attr(),
   light: DS.attr(),
-  description: DS.attr()
+  description: DS.attr(),
+  hardy: DS.attr()
 
 });
