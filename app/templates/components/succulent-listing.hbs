@@ -4,17 +4,17 @@
     <small>View Larger</small>
   </a>
   <h3>{{#link-to "succulents.show" succulent class=succulent.id}}{{succulent.title}}{{/link-to}}</h3>
-  <div class="detail owner">
-    <span>Owner:</span> {{succulent.owner}}
+  <div class="detail rarity">
+    <span>Rarity:</span> {{succulent.rarity}}
   </div>
   <div class="detail type">
     <span>Type:</span> {{succulent-type succulent.category}}
       - {{succulent.category}}
   </div>
   <div class="detail location">
-    <span>Location:</span> {{succulent.city}}
+    <span>Area:</span> {{succulent.area}}
   </div>
-  <div class="detail bedrooms">
-    <span>Number of bedrooms:</span> {{succulent.bedrooms}}
+  <div class="detail light">
+    <span>Light:</span> {{succulent.light}}
   </div>
 </article>

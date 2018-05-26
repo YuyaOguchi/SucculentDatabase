@@ -5,7 +5,7 @@ export default Controller.extend({
     filterByLocation(param) {
       if (param !== '') {
         return this.get('store')
-          .query('succulent', { city: param }).then((results) => {
+          .query('succulent', { area: param }).then((results) => {
             return { query: param, results: results };
           });
       } else {

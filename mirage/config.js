@@ -3,45 +3,48 @@ export default function() {
 
   let succulents = [{
         type: 'succulent',
-        id: 'succ1',
+        id: 'Aeonium Lily Pad',
         attributes: {
-          title: 'Succulent1',
-          owner: 'Me',
-          city: 'Succulent City',
+          title: 'Aeonium Lily Pad',
+          rarity: 5,
+          area: 'all',
           category: 'Succulent',
-          bedrooms: 1,
-          image: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg'
+          light: 5,
+          image: 'https://c2.staticflickr.com/2/1732/28480900138_b47545a020.jpg',
+          description: 'Nice and leafy plant which is fairly easy to take care of.'
         }
       }, {
         type: 'succulent',
         id: 'succ2',
         attributes: {
           title: 'Succulent2',
-          owner: 'Me',
-          city: 'Succulent City2',
+          rarity: 3,
+          area: 'NA',
           category: 'Succulent',
-          bedrooms: 2,
-          image: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'
+          light: 2,
+          image: 'https://c2.staticflickr.com/2/1732/28480900138_b47545a020.jpg',
+          description: 'Nice and leafy plant'
         }
       }, {
         type: 'succulent',
         id: 'succ3',
         attributes: {
           title: 'Succulent3',
-          owner: 'Me',
-          city: 'Succulent city3',
+          rarity: 1,
+          area: 'Europe',
           category: 'Succulent',
-          bedrooms: 3,
-          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'
+          light: 3,
+          image: 'https://c2.staticflickr.com/2/1732/28480900138_b47545a020.jpg',
+          description: 'Nice and leafy plant'
         }
       }];
 
   
 
   this.get('/succulents', function(db, request) {
-    if(request.queryParams.city !== undefined) {
+    if(request.queryParams.area !== undefined) {
       let filteredSucculents = succulents.filter(function(i) {
-        return i.attributes.city.toLowerCase().indexOf(request.queryParams.city.toLowerCase()) !== -1;
+        return i.attributes.area.toLowerCase().indexOf(request.queryParams.area.toLowerCase()) !== -1;
       });
       return { data: filteredSucculents };
     } else {

@@ -11,7 +11,7 @@ module('Integration | Component | succulent-listing', function(hooks) {
     this.succulent = EmberObject.create({
       image: 'fake.png',
       title: 'test-title',
-      owner: 'test-owner',
+      rarity: 'test-rarity',
       type: 'test-type',
       city: 'test-city',
       bedrooms: 3
@@ -21,7 +21,7 @@ module('Integration | Component | succulent-listing', function(hooks) {
   test('should display succulent details', async function(assert) {
     await render(hbs`{{succulent-listing succulent=succulent}}`);
     assert.equal(this.$('.listing h3').text(), 'test-title', 'Title: test-title');
-    assert.equal(this.$('.listing .owner').text().trim(), 'Owner: test-owner', 'Owner: test-owner');
+    assert.equal(this.$('.listing .rarity').text().trim(), 'Rarity: test-rarity', 'Owner: test-owner');
   });
 
   test('should toggle wide class on click', async function(assert) {
