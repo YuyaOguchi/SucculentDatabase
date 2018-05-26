@@ -1,0 +1,22 @@
+:root{
+  --pastel-light-red: #ffb3ba; 
+  --pastel-light-orange: #ffdfba;
+  --pastel-light-yellow: #ffffba;
+  --pastel-light-green: #baffc9;
+  --pastel-light-blue: #bae1ff;
+
+  --pastel-dark-red: #ff8383; 
+  --pastel-dark-orange: #ffdd8b;
+  --pastel-dark-yellow: #fffa90;
+  --pastel-dark-green: #81ff76;
+  --pastel-dark-blue: #7a76ff;
+
+  --succulent-1: #f6ffd7;
+  --succulent-2: #b4f3bc;
+  --succulent-3: #92d18a;
+  --succulent-4: #41a464;
+  --succulent-5: #003b3c;
+ 
+}
+
+.menu{background-color: var(--succulent-4)}
